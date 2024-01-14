@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Mon site personnel</title>
-    <link rel="stylesheet" href="https://bootswatch.com/5/materia/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css">
+    <!-- Ajoutez la bibliothèque jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Votre Nom</a>
+        <a class="navbar-brand" href="#">BINETA DIOP</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,8 +34,8 @@
 
     <div class="container mt-5">
         <h1>Bienvenue sur mon site personnel!</h1>
-        <p>Je suis Votre Nom et je suis étudiant(e) en Réseaux et Télécommunications.</p>
-        <p>Je suis passionné par les technologies de l'information et j'aime relever de nouveaux défis.</p>
+        <p>Je suis Bineta Diop et je suis étudiante en Réseaux et Télécommunications en première année.</p>
+        <p>Je suis passionnée par les technologies de l'information et j'aime relever de nouveaux défis.</p>
         <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Pour en savoir plus</button>
     </div>
 
@@ -45,10 +47,10 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 </div>
                 <div class="modal-body">
-                    <p>Je suis Votre Nom et je suis étudiant(e) en Réseaux et Télécommunications.</p>
-                    <p>Je suis passionné par les technologies de l'information et j'aime relever de nouveaux défis.</p>
+                    <p>Je suis Bineta Diop et je suis étudiante en Réseaux et Télécommunications.</p>
+                    <p>Je suis passionnée par les technologies de l'information et j'aime relever de nouveaux défis.</p>
                     <p>Voici quelques photos de moi en train de faire ce que j'aime:</p>
-                    <img src="image1.png" alt="Photo 1">
+                    <img src="image1.jpg" alt="image 1">
                     <img src="photo2.jpg" alt="Photo 2">
                     <img src="photo3.jpg" alt="Photo 3">
                 </div>
@@ -60,22 +62,28 @@
     </div>
 
     <div class="container mt-5" id="cv">
-        <h2>L'intitulé du poste Réseaux et Télécommunications de mes rêves</h2>
+        <h2>L'intitulé du poste réseaux et télécommunications de mes rêves</h2>
+        <ul>
+            <li>Admistrateur Systèmes et Réseaux</li>
+        </ul>
         <h3>Formations</h3>
         <ul>
-            <li>[Nom de la formation] - [Date de début] à [Date de fin]</li>
-            <li>[Nom de la formation] - [Date de début] à [Date de fin]</li>
+            <li>Réseaux et télécommunications - 2023/2024 </li>
+            <li>Biologie chimie Et Géosciences - 2022/2023</li>
+            <li>Préparation du bac scientifique - 2021/2022</li>
+            <li>Formation cuisine dans la restauration - 2022/2023</li>
+            <li>Brevet des collèges - 2018/2019</li>
         </ul>
         <h3>Expériences professionnelles</h3>
         <ul>
-            <li>[Nom de l'entreprise] - [Date de début] à [Date de fin]</li>
-            <li>[Nom de l'entreprise] - [Date de début] à [Date de fin]</li>
+            <li>Prise de commande au drive, cuisine et accueil au client à THIES - 21/07/2022 à 04/02/2023</li>
+            <li>Cuisine (Steak n SHAKE) à Dakar - 20/02/2023 à 30/03/2023</li>
         </ul>
         <h3>Compétences</h3>
         <ul>
-            <li>[Compétence 1]</li>
-            <li>[Compétence 2]</li>
-            <li>[Compétence 3]</li>
+            <li>Administrer</li>
+            <li>Connecter</li>
+            <li>Programmer</li>
         </ul>
     </div>
 
@@ -83,15 +91,37 @@
         <h2>Mon portfolio de compétences</h2>
         <p>Voici quelques exemples de projets sur lesquels j'ai travaillé:</p>
         <ul>
-            <li><a href="#">Projet 1</a></li>
-            <li><a href="#">Projet 2</a></li>
-            <li><a href="#">Projet 3</a></li>
+            <li><a href="#">Configuration d'une machine, d'un switch, création de vlans, maîtrise du logiciel cisco packet tracer</a></li>
+            <li><a href="#">Résolution de dysfonctionnement</a></li>
+            <li><a href="#">Maîtrise des bases du systèmes d'exploitations</a></li>
+            <li><a href="#">Écrire, lire, exécuter un programme en Python</a></li>
+            <li><a href="#">Création d'un site web</a></li>
+            <li><a href="#">Savoir réaliser un câblage sur plaque d'essais, savoir placer des appareils de mesure en continu et mesure de tension</a></li>
         </ul>
+    </div>
+
+    <div class="container mt-5" id="inscription">
+        <h2>Inscription</h2>
+        <form id="inscriptionForm">
+            <div class="form-group">
+                <label for="nom">Nom:</label>
+                <input type="text" class="form-control" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom:</label>
+                <input type="text" class="form-control" id="prenom" name="prenom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="genererPDF()">Générer PDF</button>
+        </form>
     </div>
 
     <footer class="bg-light py-3">
         <div class="container">
-            <p class="text-center">&copy; <?php echo date("Y"); ?> Votre Nom. Tous droits réservés.</p>
+            <p class="text-center">&copy; <?php echo date("Y"); ?> DIOP. Tous droits réservés.</p>
         </div>
     </footer>
 
@@ -100,5 +130,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+<!-- Ajoutez la section du script après le script jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.18.2/docxtemplater.js"></script>
+
+<script>
+    function genererDOCX() {
+        // Récupérer les valeurs du formulaire
+        var nom = document.getElementById('nom').value;
+        var prenom = document.getElementById('prenom').value;
+        var email = document.getElementById('email').value;
+
+        // Modèle DOCX
+        var template = "Nom: {nom}\nPrénom: {prenom}\nEmail: {email}";
+
+        // Préparer les données pour le modèle
+        var data = {
+            nom: nom,
+            prenom: prenom,
+            email: email
+        };
+
+        // Utiliser docxtemplater pour remplir le modèle
+        var doc = new Docxtemplater();
+        doc.loadZip(new JSZip(template));
+        doc.setData(data);
+
+        // Générer le document DOCX
+        doc.render();
+
+        // Télécharger le fichier
+        var blob = doc.getZip().generate({ type: "blob" });
+        saveAs(blob, "inscription.docx");
+    }
+</script>
 </body>
 </html>
