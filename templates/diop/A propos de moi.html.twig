@@ -1,0 +1,137 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bineta's Extraordinary Website{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #050b17;
+    }
+
+    .container {
+        background-color: #050b17;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+        border-radius: 12px;
+        margin-top: 40px;
+    }
+
+    h1, h2, h3 {
+        color: #007bff;
+    }
+
+    hr {
+        border-top: 2px solid #007bff;
+    }
+
+    p {
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+
+    .btn-primary {
+        background-color: #050b17;
+        border-color: #007bff;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+    .jumbotron {
+        background-color: #050b17;
+        color: #ffffff;
+        padding: 80px 20px;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .jumbotron h1 {
+        font-size: 3.5rem;
+    }
+
+    .jumbotron p {
+        font-size: 1.5rem;
+    }
+
+    .modal-body {
+        font-size: 1.2rem;
+    }
+
+    .hobbies-section {
+        margin-top: 30px;
+    }
+
+    .hobbies-section h2 {
+        color: #050b17;
+    }
+
+    .hobbies-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .hobbies-list-item {
+        text-align: center;
+    }
+
+    .hobbies-list-item img {
+        max-width: 100px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="jumbotron">
+    <h1 class="display-2">Welcome to Bineta's Extraordinary World!</h1>
+    <p class="lead">Discover the amazing journey of a Networks and Telecommunications enthusiast.</p>
+    <a class="btn btn-primary btn-lg" href="#about" role="button">Learn More</a>
+</div>
+
+<div class="container" id="about">
+    <section class="mb-5">
+        <h2 class="mb-4">About Me</h2>
+        <p>I'm passionate about Networks and Telecommunications. Embracing challenges and constantly seeking new opportunities, I'm on a mission to make a positive impact in the tech world.</p>
+    </section>
+
+    <div class="hobbies-section">
+        <h2 class="mb-4">Hobbies and Photos</h2>
+        <ul class="hobbies-list">
+            <li class="hobbies-list-item">
+                <img src="photography.jpg" alt="Photography">
+                <p>Capturing moments through the lens is one of my favorite hobbies. Each photo tells a unique story.</p>
+            </li>
+            <li class="hobbies-list-item">
+                <img src="hiking.jpg" alt="Hiking">
+                <p>Exploring nature and embarking on exciting hiking adventures is my way of connecting with the great outdoors.</p>
+            </li>
+            <li class="hobbies-list-item">
+                <img src="cooking.jpg" alt="cooking">
+                <p>Diving into the world of cooking is my escape, and I'm always eager to discover new culinary treasures</p>
+            </li>
+        </ul>
+    </div>
+
+    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Discover More</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">More About Bineta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

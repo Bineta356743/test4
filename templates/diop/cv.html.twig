@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bineta's CV{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        font-family: 'Century Gothic', Calibri, sans-serif;
+        background-color: #050b17;
+    }
+
+    .container {
+        background-color: #050b17;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+
+    h1, h2, h3 {
+
+        color: #007bff;
+    }
+
+    hr {
+        border-top: 2px solid #AAA;
+    }
+
+    address {
+        font-style: 40px;
+    }
+
+    .lead {
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+
+    ul.list-group {
+        margin-bottom: 0;
+    }
+
+    ul.list-group-item {
+        list-style: none;
+    }
+</style>
+
+<div class="container" id="cv">
+    <h1 class="display-4 text-center">Bineta DIOP</h1>
+    <hr class="my-4">
+
+    <section class="mb-5" id="coordonnees">
+        <h2 class="mb-4">Coordonnées</h2>
+        <address>
+            <strong>Nom:</strong> Bineta<br>
+            <strong>Prénom:</strong> DIOP<br>
+            <strong>Adresse:</strong> 52 boulevard de belgique<br>
+            <strong>Téléphone:</strong> 07 44 71 17 27<br>
+            <strong>Email:</strong>binetaadiop425@gmail.com<br>
+        </address>
+    </section>
+
+    <section class="mb-5" id="intitule_poste">
+        <h2 class="mb-4">L'intitulé du poste Réseaux et Télécommunications de mes rêves</h2>
+        <p class="lead">Administrateur Systèmes et Réseaux</p>
+    </section>
+
+    <section class="mb-5" id="formations">
+        <h2 class="mb-4">Formations</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Réseaux et Télécommunications - 2023/2024</li>
+            <li class="list-group-item">Biologie Chimie et Géosciences - 2022/2023</li>
+            <li class="list-group-item">Préparation du bac scientifique - 2021/2022</li>
+            <li class="list-group-item">Formation en cuisine dans la restauration - 2022/2023</li>
+            <li class="list-group-item">Brevet des collèges - 2018/2019</li>
+        </ul>
+    </section>
+
+    <section class="mb-5" id="experiences">
+        <h2 class="mb-4">Expériences Professionnelles</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Prise de commande au drive, cuisine et accueil au client à THIES - 21/07/2022 à 04/02/2023</li>
+            <li class="list-group-item">Cuisine (Steak n SHAKE) à Dakar - 20/02/2023 à 30/03/2023</li>
+        </ul>
+    </section>
+
+    <section class="mb-5" id="competences">
+        <h2 class="mb-4">Compétences</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Administrer</li>
+            <li class="list-group-item">Connecter</li>
+            <li class="list-group-item">Programmer</li>
+        </ul>
+    </section>
+</div>
+{% endblock %}

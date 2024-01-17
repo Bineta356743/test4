@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bineta's Portfolio{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #050b17;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #050b17;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+        margin-top: 40px;
+    }
+
+    .skill-card {
+        border: 1px solid #007bff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    h2, h3, h4 {
+        color: #007bff;
+    }
+
+    p {
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #007bff;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #050b17;
+        color: #ffffff;
+    }
+</style>
+
+<div class="container" id="portfolio">
+    <h2>Mon Portfolio</h2>
+
+    <div class="skill-card">
+        <h3>Administrer les réseaux et l’Internet</h3>
+        
+            <p>Configurer les fonctions de base du réseau local :Adresse IPV4</p>
+            <p>Identifier les dysfonctionnements du réseau local</p>
+           <p> Configuration administration SWITCH</p>
+           <p> Configuration des Vlan<p> 
+            <p>Installer un poste client</p>
+            <p>Maîtriser les rôles et les principes fondamentaux des systèmes d’exploitation afin d’interagir avec ceux-ci pour la configuration et administration des réseaux et services fournis</p>
+       <p> Lois en Électricité</p>
+    </div>
+
+    <div class="skill-card">
+        <h3>Connecter les entreprises et les usagers</h3>
+        <p>
+        Mesures d'Amplitude, de Période, de Déphasage de Signaux
+        </p>
+       <p> Cablâge</p>
+       <p> Étude de Fonctions</p>
+       <p>les calculs et équations avec exp, ln, puissances sont maitrisés, ainsi que les applications classiques (dB, logarithme décimal)</p>
+    </div>
+
+    <div class="skill-card">
+        <h3>Créer des outils et applications informatiques pour les R&T</h3>
+        <p>
+            Utiliser un système informatique(maitrise des logiciels notepadd++ ,spyder )
+        </p>
+        <p>Lire et exécuter un programme</p>
+        <p>créer un programme  en python</p>
+        <p>Résolution numérique d'une Équation</p>
+    </div>
+
+    <!-- Ajoutez d'autres cartes pour chaque compétence -->
+
+</div>
+
+{% endblock %}

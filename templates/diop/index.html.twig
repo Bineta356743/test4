@@ -1,7 +1,4 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Hello DiopController!{% endblock %}
-
 {% block body %}
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
@@ -16,5 +13,88 @@
         <li>Your controller at <code><a href="{{ 'C:/Users/binet/Documents/test4/src/Controller/DiopController.php'|file_link(0) }}">src/Controller/DiopController.php</a></code></li>
         <li>Your template at <code><a href="{{ 'C:/Users/binet/Documents/test4/templates/diop/index.html.twig'|file_link(0) }}">templates/diop/index.html.twig</a></code></li>
     </ul>
+    
 </div>
+<div class="container mt-5">
+        <h1>Bienvenue sur mon site personnel!</h1>
+        <p>Je suis Bineta Diop et je suis étudiante en Réseaux et Télécommunications en première année.</p>
+        <p>Je suis passionnée par les technologies de l'information et j'aime relever de nouveaux défis.</p>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Pour en savoir plus</button>
+    </div>
+     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Je suis Bineta Diop et je suis étudiante en Réseaux et Télécommunications.</p>
+                    <p>Je suis passionnée par les technologies de l'information et j'aime relever de nouveaux défis.</p>
+                    <p>Voici quelques photos de moi en train de faire ce que j'aime:</p>
+                    <img src="image1.jpg" alt="image 1">
+                    <img src="photo2.jpg" alt="Photo 2">
+                    <img src="photo3.jpg" alt="Photo 3">
+                </div>
+                <div class="container mt-5" id="cv">
+        <h2>L'intitulé du poste réseaux et télécommunications de mes rêves</h2>
+        <ul>
+            <li>Admistrateur Systèmes et Réseaux</li>
+        </ul>
+        <h3>Formations</h3>
+        <ul>
+            <li>Réseaux et télécommunications - 2023/2024 </li>
+            <li>Biologie chimie Et Géosciences - 2022/2023</li>
+            <li>Préparation du bac scientifique - 2021/2022</li>
+            <li>Formation cuisine dans la restauration - 2022/2023</li>
+            <li>Brevet des collèges - 2018/2019</li>
+        </ul>
+        <h3>Expériences professionnelles</h3>
+        <ul>
+            <li>Prise de commande au drive, cuisine et accueil au client à THIES - 21/07/2022 à 04/02/2023</li>
+            <li>Cuisine (Steak n SHAKE) à Dakar - 20/02/2023 à 30/03/2023</li>
+        </ul>
+        <h3>Compétences</h3>
+        <ul>
+            <li>Administrer</li>
+            <li>Connecter</li>
+            <li>Programmer</li>
+        </ul>
+    </div>
+
+    <div class="container mt-5" id="portfolio">
+        <h2>Mon portfolio de compétences</h2>
+        <p>Voici quelques exemples de projets sur lesquels j'ai travaillé:</p>
+        <ul>
+            <li><a href="#">Configuration d'une machine, d'un switch, création de vlans, maîtrise du logiciel cisco packet tracer</a></li>
+            <li><a href="#">Résolution de dysfonctionnement</a></li>
+            <li><a href="#">Maîtrise des bases du systèmes d'exploitations</a></li>
+            <li><a href="#">Écrire, lire, exécuter un programme en Python</a></li>
+            <li><a href="#">Création d'un site web</a></li>
+            <li><a href="#">Savoir réaliser un câblage sur plaque d'essais, savoir placer des appareils de mesure en continu et mesure de tension</a></li>
+        </ul>
+    </div>
+ <div class="container mt-5" id="inscription">
+        <h2>Inscription</h2>
+        <form id="inscriptionForm">
+            <div class="form-group">
+                <label for="nom">Nom:</label>
+                <input type="text" class="form-control" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom:</label>
+                <input type="text" class="form-control" id="prenom" name="prenom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="genererPDF()">Générer PDF</button>
+        </form>
+    </div>
+
+    <footer class="bg-light py-3">
+        <div class="container">
+            <p class="text-center">&copy; <?php echo date("Y"); ?> DIOP. Tous droits réservés.</p>
+        </div>
+    </footer>
+
 {% endblock %}

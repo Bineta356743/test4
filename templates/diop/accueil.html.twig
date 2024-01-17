@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bineta's Extraordinary Website{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #050b17;
+    }
+
+    .container {
+        background-color: #050b17;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+        border-radius: 12px;
+        margin-top: 40px;
+    }
+
+    h1, h2, h3 {
+        color: #007bff;
+    }
+
+    hr {
+        border-top: 2px solid #007bff;
+    }
+
+    p {
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+
+    .btn-primary {
+        background-color: #050b17;
+        border-color: #007bff;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+    .jumbotron {
+        background-color: ##050b17;
+        color: #ffffff;
+        padding: 80px 20px;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .jumbotron h1 {
+        font-size: 3.5rem;
+    }
+
+    .jumbotron p {
+        font-size: 1.5rem;
+    }
+</style>
+
+<div class="jumbotron">
+    <h1 class="display-2">Hello, I'm Bineta Diop!</h1>
+    <p class="lead">A passionate student in Networks and Telecommunications, eager to explore the world of technology.</p>
+    <p>Join me on this exciting journey of learning and innovation!</p>
+    <a class="btn btn-primary btn-lg" href="#about" role="button">Learn More</a>
+</div>
+
+<div class="container" id="about">
+    <section class="mb-5">
+        <h2 class="mb-4">About Me</h2>
+        <p>I am Bineta Diop, currently pursuing my Bachelor's degree in Networks and Telecommunications. My fascination with technology drives me to constantly seek new challenges and opportunities.</p>
+        <p>Throughout my academic journey, I have gained valuable insights into the ever-evolving world of networks and telecommunications. I am enthusiastic about applying my knowledge to real-world scenarios and making a positive impact.</p>
+    </section>
+
+    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Discover More</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">More About Me</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Add additional details about yourself here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
