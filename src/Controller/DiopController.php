@@ -11,7 +11,7 @@ class DiopController extends AbstractController
     #[Route('/diop', name: 'app_diop')]
     public function Diop(): Response
     {
-        return $this->render('diop/index.html.twig', [
+        return $this->render('diop/accueil.html.twig', [
             'controller_name' => 'DiopController',
         ]);
     }
