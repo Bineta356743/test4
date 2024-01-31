@@ -6,35 +6,39 @@
 <style>
     body {
         font-family: 'Century Gothic', Calibri, sans-serif;
-        background-color: #050b17;
+        background-image: url(./background.jpg);
+        color: #ffffff; /* Couleur du texte pour l'ensemble du corps */
+        margin: 0;
     }
 
     .container {
-        background-color: #050b17;
+        background-color: rgba(5, 11, 23, 0.9);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         padding: 20px;
         border-radius: 8px;
-        margin-top: 20px;
-        color: #ffffff; /* Set text color for paragraphs */
-        
+        margin-top: 10px;
+        overflow: hidden; /* Ajouté pour résoudre le problème de bandes blanches */
     }
 
     h1, h2, h3 {
-
         color: #007bff;
+        font-size: 2rem; /* Ajusté la taille des titres */
+        margin-bottom: 10px; /* Ajouté une marge en bas des titres */
     }
-     p {
+
+    p {
         font-size: 1.3rem;
         line-height: 1.6;
-        color: #ffffff; /* Set text color for paragraphs */
+        margin: 0; /* Supprime la marge par défaut des paragraphes */
     }
 
     hr {
         border-top: 2px solid #AAA;
+        margin: 10px 0; /* Marge plus petite */
     }
 
     address {
-        font-style: 40px;
+        font-style: 20px;
     }
 
     .lead {
@@ -43,60 +47,170 @@
     }
 
     ul.list-group {
-        margin-bottom: 0;
+        margin: 0;
+        padding: 0;
     }
 
     ul.list-group-item {
         list-style: none;
     }
+
+    .inscription-form {
+        margin-top: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #downloadLink {
+        display: none;
+        margin-top: 10px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    /* Ajouter un style pour les sections */
+    section {
+        margin-bottom: 20px;
+        border: none; /* Supprimer le cadre autour des sections */
+        padding: 0; /* Supprimer la marge intérieure des sections */
+    }
+
+    /* Ajouter des points devant les paragraphes du bloc "Savoir-être" */
+    #savoir_etre p {
+        margin-left: 20px;
+    }
+
 </style>
 
 <div class="container" id="cv">
-    <h1 class="display-4 text-center">Bineta DIOP</h1>
+    <h1 class="display-4 text-center">CV_Bineta_DIOP</h1>
     <hr class="my-4">
 
-    <section class="mb-5" id="coordonnees">
-        <h2 class="mb-4">Coordonnées</h2>
+    <section id="coordonnees">
+        <h2>Coordonnées</h2>
         <address>
             <strong>Nom:</strong> Bineta<br>
             <strong>Prénom:</strong> DIOP<br>
-            <strong>Adresse:</strong> 52 boulevard de belgique<br>
+            <strong>Adresse:</strong> 52 boulevard de Belgique<br>
             <strong>Téléphone:</strong> 07 44 71 17 27<br>
-            <strong>Email:</strong>binetaadiop425@gmail.com<br>
+            <strong>Email:</strong> binetaadiop425@gmail.com<br>
         </address>
     </section>
 
-    <section class="mb-5" id="intitule_poste">
-        <h2 class="mb-4">L'intitulé du poste Réseaux et Télécommunications de mes rêves</h2>
+    <section id="intitule_poste">
+        <h2>L'intitulé du poste Réseaux et Télécommunications de mes rêves</h2>
         <p class="lead">Administrateur Systèmes et Réseaux</p>
     </section>
 
-    <section class="mb-5" id="formations">
-        <h2 class="mb-4">Formations</h2>
-        <ul class="list-group">
-            <li class="list-group-item">Réseaux et Télécommunications - 2023/2024</li>
-            <li class="list-group-item">Biologie Chimie et Géosciences - 2022/2023</li>
-            <li class="list-group-item">Préparation du bac scientifique - 2021/2022</li>
-            <li class="list-group-item">Formation en cuisine dans la restauration - 2022/2023</li>
-            <li class="list-group-item">Brevet des collèges - 2018/2019</li>
+    <section id="formations">
+        <h2>Formations</h2>
+        <ul>
+            <li>Réseaux et Télécommunications - 2023/2024</li>
+            <li>Biologie Chimie et Géosciences - 2022/2023</li>
+            <li>Préparation du bac scientifique - 2021/2022</li>
+            <li>Formation en cuisine dans la restauration - 2022/2023</li>
+            <li>Brevet des collèges - 2018/2019</li>
         </ul>
     </section>
 
-    <section class="mb-5" id="experiences">
-        <h2 class="mb-4">Expériences Professionnelles</h2>
-        <ul class="list-group">
-            <li class="list-group-item">Prise de commande au drive, cuisine et accueil au client à THIES - 21/07/2022 à 04/02/2023</li>
-            <li class="list-group-item">Cuisine (Steak n SHAKE) à Dakar - 20/02/2023 à 30/03/2023</li>
+    <section id="experiences">
+        <h2>Expériences Professionnelles</h2>
+        <ul>
+            <li>Prise de commande au drive, cuisine et accueil des clients à THIES - 21/07/2022 à 04/02/2023</li>
+            <li>Cuisine (Steak n SHAKE) à Dakar - 20/02/2023 à 30/03/2023</li>
         </ul>
     </section>
 
-    <section class="mb-5" id="competences">
-        <h2 class="mb-4">Compétences</h2>
-        <ul class="list-group">
-            <li class="list-group-item">Administrer</li>
-            <li class="list-group-item">Connecter</li>
-            <li class="list-group-item">Programmer</li>
+    <section id="competences">
+        <h2>Compétences</h2>
+        <ul>
+            <li>Administrer</li>
+            <li>Connecter</li>
+            <li>Programmer</li>
+            <li>Accueillir de la clientèle</li>
         </ul>
     </section>
+
+    <!-- Ajouter une section "Savoir-être" -->
+    <section id="savoir_etre">
+        <h2>Savoir-être</h2>
+        <p>• Capacité à travailler en équipe et à communiquer de manière efficace.</p>
+        <p>• Rigueur et organisation dans le travail quotidien.</p>
+        <p>• Adaptabilité face aux changements et aux nouveaux défis.</p>
+        <p>• Sens de l'écoute et ouverture d'esprit.</p>
+        <p>• Esprit d'analyse et résolution de problèmes.</p>
+    </section>
+
+    <!-- Ajouter un formulaire d'inscription -->
+    <div class="inscription-form">
+        <h2>Inscription</h2>
+        <form id="inscriptionForm">
+            <div class="form-group">
+                <label for="nom">Nom :</label>
+                <input type="text" class="form-control" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom :</label>
+                <input type="text" class="form-control" id="prenom" name="prenom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <button type="submit">Télécharger le CV</button>
+        </form>
+
+        <!-- Ajouter un lien pour télécharger le CV -->
+        <a id="downloadLink" download="cv_bineta_diop.pdf">Télécharger le CV</a>
+    </div>
 </div>
+
+<script>
+    document.getElementById('inscriptionForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Empêcher la soumission du formulaire
+
+        // Vérifier si les champs du formulaire sont remplis
+        var nom = document.getElementById('nom').value;
+        var prenom = document.getElementById('prenom').value;
+        var email = document.getElementById('email').value;
+
+        if (nom && prenom && email) {
+            // Remplacez le chemin par le chemin réel de votre CV
+            var cvPath = '/cv.pdf';
+
+            // Créer un lien pour télécharger le CV
+            var downloadLink = document.getElementById('downloadLink');
+            downloadLink.href = cvPath;
+
+            // Afficher le lien et déclencher le téléchargement
+            downloadLink.style.display = 'block';
+            downloadLink.click();
+        } else {
+            alert('Veuillez remplir tous les champs du formulaire.');
+        }
+    });
+</script>
+
 {% endblock %}

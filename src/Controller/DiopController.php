@@ -43,11 +43,5 @@ class DiopController extends AbstractController
             'controller_name' => 'DiopController',
         ]);
     }
-    #[Route('/formulaire', name: 'formulaire')]
-    public function formulaire(): Response
-    {
-        return $this->render('diop/formulaire.html.twig', [
-            'controller_name' => 'DiopController',
-        ]);
-    }
+   
 }
